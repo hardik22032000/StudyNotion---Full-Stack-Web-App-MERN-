@@ -1,0 +1,72 @@
+import { ACCOUNT_TYPE } from "../utils/constants";
+export const sidebarLinks = [
+  {
+    id: 1,
+    name: "My Profile",
+    path: "/dashboard/my-profile",
+    icon: "VscAccount",
+  },
+  {
+    id: 2,
+    name: "Dashboard",
+    path: "/dashboard/instructor-dashboard",
+    type: ACCOUNT_TYPE.INSTRUCTOR,
+    icon: "VscDashboard",
+  },
+  {
+    id: 3,
+    name: "My Courses",
+    path: "/dashboard/my-courses",
+    type: ACCOUNT_TYPE.INSTRUCTOR,
+    icon: "VscVm",
+  },
+  {
+    id: 4,
+    name: "Add Course",
+    path: "/dashboard/add-course",
+    type: ACCOUNT_TYPE.INSTRUCTOR,
+    icon: "VscAdd",
+  },
+  {
+    id: 5,
+    name: "Enrolled Courses",
+    path: "/dashboard/enrolled-courses",
+    type: ACCOUNT_TYPE.STUDENT,
+    icon: "VscMortarBoard",
+  },
+  {
+    id: 6,
+    name: "Wishlist",
+    path: "/dashboard/wishlist",
+    type: ACCOUNT_TYPE.STUDENT,
+    icon: "VscBookmark",
+  },
+  {
+    id: 7,
+    name: "Cart",
+    path: "/dashboard/cart",
+    type: ACCOUNT_TYPE.STUDENT,
+    icon: "TiShoppingCart",
+  },
+  {
+    id: 8,
+    name: "Dashboard",
+    path: "/dashboard/admin-dashboard",
+    type: ACCOUNT_TYPE.ADMIN,
+    icon: "VscDashboard",
+  },
+  {
+    id: 9,
+    name: "All Categories",
+    path: "/dashboard/all-categories",
+    type: ACCOUNT_TYPE.ADMIN,
+    icon: "VscVm",
+  },
+  {
+    id: 10,
+    name: "Add Category",
+    path: "/dashboard/add-category",
+    type: ACCOUNT_TYPE.ADMIN,
+    icon: "VscAdd",
+  },
+];

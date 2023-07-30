@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body{
+    overflow-x: hidden;
+}
+
+.homepage_bg{
+    background: url("../src/assets/Images/bghome.svg");
+}
+
+.shadowclass{
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 12px 12px 0px #FFD60A;
+}
+
+.shadow-home{
+  box-shadow: -12px -12px 25px 2px #118AB2;
+}
+
+.custom-loader {
+    width: 50px;
+    height: 50px;
+    display: grid;
+}
+.custom-loader::before,
+.custom-loader::after {    
+    content:"";
+    grid-area: 1/1;
+    --c: radial-gradient(farthest-side,#766DF4 92%,#0000);
+    background: 
+      var(--c) 50%  0, 
+      var(--c) 50%  100%, 
+      var(--c) 100% 50%, 
+      var(--c) 0    50%;
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    animation: s2 1s infinite;
+}
+.custom-loader::before {
+  margin:4px;
+  filter:hue-rotate(45deg);
+  background-size: 8px 8px;
+  animation-timing-function: linear
+}
+
+@keyframes s2{ 
+  100%{transform: rotate(.5turn)}
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+
+.swiper-button-prev{
+  background-color: #424854 !important;
+  color: white !important;
+  border-radius: 40px;
+  width: 40px !important;
+}
+
+.swiper-button-prev:after, .swiper-button-next:after{
+  font-size: 15px !important;
+}
+
+.swiper-button-next{
+  background-color: #424854 !important;
+  color: white !important;
+  border-radius: 40px;
+  width: 40px !important;
+}
+
+@keyframes smoothbounceball{
+  from { transform: translate3d(0, 2px, 0);}
+  to { transform: translate3d(0, -2px, 0);}
+}
+
+
+.bounce{
+  animation: smoothbounceball 0.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.blackButton {
+  @apply text-xl cursor-pointer rounded-md bg-richblack-800 px-[20px] py-[8px] font-semibold text-richblack-5;
+}
+
+.codeblock1 {
+  width: 372.95px;
+  height: 257.05px;
+  border-radius: 100%;
+  background: linear-gradient(
+    123.77deg,
+    #8a2be2 -6.46%,
+    #ffa500 59.04%,
+    #f8f8ff 124.53%
+  );
+  opacity: 0.2;
+  filter: blur(34px);
+  transform: matrix(1, 0, -0.03, 1, 0, 0);
+}
+
+.codeblock2 {
+  position: absolute;
+  width: 372.95px;
+  height: 257.05px;
+  border-radius: 100%;
+  background: linear-gradient(
+    118.19deg,
+    #1fa2ff -3.62%,
+    #12d8fa 50.44%,
+    #a6ffcb 104.51%
+  );
+  opacity: 0.2;
+  filter: blur(34px);
+  transform: matrix(1, 0, -0.03, 1, 0, 0);
+}
+
+
+
+@media screen and (min-width: 400px) {
+  .swiper-container {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .swiper-container {
+    width: 700px;
+  }
+}
