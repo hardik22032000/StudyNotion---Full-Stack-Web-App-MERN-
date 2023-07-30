@@ -29,7 +29,7 @@ function ReviewSlider() {
 
   return (
     <div className="text-white">
-      <div className="sm:my-[30px] sm:h-[184px] md:my-[30px] md:h-[184px] lg:my-[30px] lg:h-[184px] lg:max-w-maxContent max-w-maxContentTab mx-auto">
+      <div className="sm:my-[30px] sm:h-[184px] md:my-[30px] md:h-[184px] lg:my-[30px] lg:h-[214px] lg:max-w-maxContent max-w-maxContentTab mx-auto">
         <Swiper
           direction="horizontal"
           slidesPerView={4}
