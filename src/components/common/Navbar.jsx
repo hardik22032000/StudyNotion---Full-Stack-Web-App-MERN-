@@ -65,7 +65,7 @@ const Navbar = () => {
                                                             >{sublink.name}</p>
                                                         </Link>
                                                     ))
-                                                ) : (<div className="text-center">No Courses Found</div>)
+                                                ) : (<div className="text-center">No Categories Found</div>)
                                             }
                                             </div>
 
