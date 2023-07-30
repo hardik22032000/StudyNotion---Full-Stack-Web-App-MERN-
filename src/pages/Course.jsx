@@ -12,6 +12,7 @@ import {RiVideoFill} from "react-icons/ri";
 import {BsChevronDown} from "react-icons/bs";
 import ReviewSlider from '../components/common/ReviewSlider';
 import Footer from "../components/common/Footer";
+import { Link } from 'react-router-dom';
 
 const Course = () => {
 
@@ -88,7 +89,34 @@ const Course = () => {
   }
 
   return (
-    <div className='mt-10'>
+        (token === null) ? 
+        (
+            <div className='h-screen flex flex-col gap-y-10 justify-center items-center'>
+                
+                <h2 className='text-2xl text-white font-inter font-semibold'>
+                Please Login or Register to view Courses
+                </h2>
+
+                <div className='flex flex-row gap-4'>
+                    <Link to="/login">
+                        <button className='bg-yellow-50 px-4 py-4 text-black rounded-md font-semibold font-inter
+                        hover:scale-95 transition-all duration-200'>
+                        Login
+                        </button>
+                    </Link>
+
+                    <Link to="/signup">
+                        <button className='bg-richblack-700 px-4 py-4 text-white rounded-md font-semibold font-inter
+                        hover:scale-95 transition-all duration-200'>
+                        Sign Up
+                        </button>
+                    </Link>
+
+                </div>
+
+            </div>
+        )
+        : (<div className='mt-10'>
         <div className='flex lg:flex-row md:flex-row sm:flex-row'>
             
             <div className='bg-richblack-800 w-[60%] py-10 pl-20'>
@@ -234,7 +262,7 @@ const Course = () => {
         </div>
 
         <Footer />
-    </div>
+    </div>)
   )
 }
 
