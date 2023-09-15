@@ -21,8 +21,6 @@ const ContactUsForm = () => {
     try{
         setloading(true);
         const response = await apiconnector("POST",contactusEndpoint.CONTACT_US_API, data);
-
-        console.log("Logging Response",response);
         setloading(false);
     }
     catch(error){
