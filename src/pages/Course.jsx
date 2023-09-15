@@ -88,7 +88,7 @@ const Course = () => {
     return str;
   }
 
-  return (
+    return (
         (token === null) ? 
         (
             <div className='h-screen flex flex-col gap-y-10 justify-center items-center'>

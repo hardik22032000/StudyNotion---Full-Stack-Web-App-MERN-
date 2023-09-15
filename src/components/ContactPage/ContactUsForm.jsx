@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Spinner from "../common/Spinner";
 import CountryCode from "../../data/countrycode.json";
@@ -17,7 +17,7 @@ const ContactUsForm = () => {
   } = useForm();
 
   const submitContactForm = async (data) => {
-    console.log("Logging Data", data);
+    
     try{
         setloading(true);
         const response = await apiconnector("POST",contactusEndpoint.CONTACT_US_API, data);
@@ -30,7 +30,6 @@ const ContactUsForm = () => {
         setloading(false);
     }
   }
-
 
   useEffect(() => {
     if(isSubmitSuccessful){
