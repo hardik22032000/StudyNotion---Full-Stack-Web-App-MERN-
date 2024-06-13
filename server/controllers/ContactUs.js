@@ -17,7 +17,6 @@ exports.contactUsController = async (req, res) => {
     })
   } 
   catch (error) {
-    console.log("Error", error)
     console.log("Error message :", error.message)
     return res.json({
       success: false,

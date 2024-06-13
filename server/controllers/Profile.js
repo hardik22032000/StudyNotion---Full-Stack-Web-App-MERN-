@@ -151,7 +151,6 @@ exports.updateDisplayPicture = async (req, res) => {
 
       //Upload image to cloudinary
       const image = await uploadToCloudinary(displayPicture,process.env.FOLDER_NAME,1000,1000);
-      console.log(image);
       
       //Update display picture in DB
       const updatedProfile = await User.findByIdAndUpdate(

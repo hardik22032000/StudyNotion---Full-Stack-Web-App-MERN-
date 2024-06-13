@@ -285,21 +285,12 @@ exports.getFullCourseDetails = async (req, res) => {
         userId: userId,
       })
   
-      console.log("courseProgressCount : ", courseProgressCount)
-  
       if (!courseDetails) {
         return res.status(400).json({
           success: false,
           message: `Could not find course with id: ${courseId}`,
         })
       }
-  
-      // if (courseDetails.status === "Draft") {
-      //   return res.status(403).json({
-      //     success: false,
-      //     message: `Accessing a draft course is forbidden`,
-      //   });
-      // }
   
       let totalDurationInSeconds = 0
       courseDetails.courseContent.forEach((content) => {
